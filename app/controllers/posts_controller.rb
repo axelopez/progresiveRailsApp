@@ -1,6 +1,23 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ show edit update destroy mensaje ]
 
+  def mensaje
+    
+
+    #Webpush.payload_send(
+    #    message: 'Hello from ruby',
+    #    endpoint: <ENDPOINT-HERE>,
+    #    p256dh: <P256DH-HERE>,
+    #    auth: <AUTH-HERE>,
+     #   vapid: {
+     #       subject: 'Hello from ruby',
+     #       public_key: <PUBLIC-KEY>,
+     #       private_key: <PRIVATE-KEY>
+     #   }
+   # )
+  
+    redirect_to @post, notice: "Mensajes"
+  end
   # GET /posts or /posts.json
   def index
     @posts = Post.all
