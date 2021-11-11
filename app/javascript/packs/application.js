@@ -14,7 +14,7 @@ ActiveStorage.start()
 
 window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then(registration => {
-      console.log('ServiceWorker registered: ', registration);
+      console.log('ServiceWorker registrado: ', registration);
   
       var serviceWorker;
       if (registration.installing) {
@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
         console.log('Service worker installed & waiting.');
       } else if (registration.active) {
         serviceWorker = registration.active;
-        console.log('Service worker active.');
+        console.log('Service worker active now!.');
       }
     }).catch(registrationError => {
       console.log('Service worker registration failed: ', registrationError);
